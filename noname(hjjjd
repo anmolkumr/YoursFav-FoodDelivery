@@ -1,0 +1,11 @@
+while($row = mysql_fetch_object($query) ) 
+{ 
+echo "$row->username<br />";
+
+echo "$row->first_name<br />";
+
+echo "$row->last_name<br />";
+
+echo "$row->city<br />"; 
+} 
+$query = mysql_query("SELECT password, created_at FROM users WHERE username = $_SESSION['username']");
